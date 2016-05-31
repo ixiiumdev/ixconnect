@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_ixii2_ixconnect.ixQueueConnect</api_name>
         <client_callable>false</client_callable>
@@ -27,7 +27,7 @@ ixQueueConnect.prototype = {
 				"Action": act,
 				"IsSource": isSource.toString(),
 				"Identifier": incid.toString(),
-				"Topic": topic
+				"Topic": topic,
 			},
 			"Data": data
 			
@@ -322,14 +322,14 @@ ixQueueConnect.prototype = {
         <sys_created_on>2015-11-16 20:54:13</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>d41c07016fb746007a31e0526e3ee43d</sys_id>
-        <sys_mod_count>176</sys_mod_count>
+        <sys_mod_count>177</sys_mod_count>
         <sys_name>ixQueueConnect</sys_name>
         <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
         <sys_update_name>sys_script_include_d41c07016fb746007a31e0526e3ee43d</sys_update_name>
-        <sys_updated_by>manuel</sys_updated_by>
-        <sys_updated_on>2016-05-24 08:44:52</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-05-31 18:55:36</sys_updated_on>
     </sys_script_include>
 </record_update>
