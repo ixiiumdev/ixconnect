@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_ixii2_ixconnect.ixQDebug</api_name>
+        <client_callable>false</client_callable>
+        <description>Debug function for logging the debug</description>
+        <name>ixQDebug</name>
+        <script><![CDATA[var ixQDebug = Class.create();
+ixQDebug.prototype = {
+	debugOn: false,
+	initialize: function(){
+		//check if the debug mode is turned on
+		this.debugOn = gs.getProperty('x_ixii2_ixconnect.debug') == 'true';
+	},
+	
+	debug : function(value) {
+		//when debug mode is turned on, insert logging
+		if (this.debugOn) {
+			//log debug messages from scripts
+			gs.info('IXConnect: Debug: ' + value);
+		}
+	},
+	type: 'ixQDebug'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-02-24 08:18:20</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>177d9b456f3112007a31e0526e3ee458</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>ixQDebug</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_script_include_177d9b456f3112007a31e0526e3ee458</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-03-24 09:50:09</sys_updated_on>
+    </sys_script_include>
+</record_update>

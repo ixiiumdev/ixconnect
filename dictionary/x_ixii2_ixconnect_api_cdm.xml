@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="IXC-CDM" max_length="40" name="x_ixii2_ixconnect_api_cdm" type="collection">
+        <element attributes="import_attribute_name=datatype" label="Datatype" max_length="40" name="datatype" type="string"/>
+        <element attributes="import_attribute_name=field" label="Field" max_length="40" name="field" type="string"/>
+        <element attributes="import_attribute_name=id" label="id" max_length="40" name="id" type="string"/>
+        <element attributes="import_attribute_name=process" label="Process" max_length="40" name="process" type="string"/>
+    </element>
+</database>

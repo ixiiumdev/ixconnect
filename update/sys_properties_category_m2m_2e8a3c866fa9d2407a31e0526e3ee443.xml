@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="IXConnect">ff773f916fe1d2407a31e0526e3ee4bc</category>
+        <order>1</order>
+        <property display_value="x_ixii2_ixconnect.ixcoreUser" name="x_ixii2_ixconnect.ixcoreUser">005abc866fa9d2407a31e0526e3ee4e1</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-02-14 12:38:11</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2e8a3c866fa9d2407a31e0526e3ee443</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_ixii2_ixconnect.Ixcore.user.IXConnect</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_2e8a3c866fa9d2407a31e0526e3ee443</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-02-14 12:38:11</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

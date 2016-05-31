@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_ixii2_ixconnect_ixqueue" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Processed</label>
+            <language>en</language>
+            <name>x_ixii2_ixconnect_ixqueue</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2015-11-17 10:06:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>354202916f3b46007a31e0526e3ee4ff</sys_id>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2015-11-17 14:47:40</sys_updated_on>
+            <value>Processed</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Retried</label>
+            <language>en</language>
+            <name>x_ixii2_ixconnect_ixqueue</name>
+            <sequence>0</sequence>
+            <sys_created_by>manuel</sys_created_by>
+            <sys_created_on>2016-02-19 09:58:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ae06822737a9520053924bf954990e14</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-03-27 11:07:57</sys_updated_on>
+            <value>Retried</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Processing</label>
+            <language>en</language>
+            <name>x_ixii2_ixconnect_ixqueue</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2015-11-17 10:06:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e44242916f3b46007a31e0526e3ee4f2</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2015-11-17 14:47:33</sys_updated_on>
+            <value>Processing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Waiting</label>
+            <language>en</language>
+            <name>x_ixii2_ixconnect_ixqueue</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2015-11-17 10:06:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5e3202916f3b46007a31e0526e3ee40c</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2015-11-17 14:47:37</sys_updated_on>
+            <value>Waiting</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Error</label>
+            <language>en</language>
+            <name>x_ixii2_ixconnect_ixqueue</name>
+            <sequence>3</sequence>
+            <sys_created_by>ronald</sys_created_by>
+            <sys_created_on>2015-11-17 14:30:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8bbe729d6f3b46007a31e0526e3ee4a0</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2015-11-17 14:47:42</sys_updated_on>
+            <value>Error</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <name>x_ixii2_ixconnect_ixqueue</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2015-11-17 10:06:12</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>768fc5a0db3312000fc8f11fbf9619ed</sys_id>
+            <sys_mod_count>37</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+            <sys_update_name>sys_choice_x_ixii2_ixconnect_ixqueue_state</sys_update_name>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-05-20 11:34:24</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

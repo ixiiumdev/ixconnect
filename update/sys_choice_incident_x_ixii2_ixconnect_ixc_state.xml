@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_ixii2_ixconnect_ixc_state" table="incident" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_ixii2_ixconnect_ixc_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Accepted</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2015-11-16 19:39:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>99dbf24d6f7746007a31e0526e3ee490</sys_id>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2015-12-09 19:37:22</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_ixii2_ixconnect_ixc_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Connecting</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2015-11-16 19:39:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b8abf24d6f7746007a31e0526e3ee489</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2015-12-09 19:37:22</sys_updated_on>
+            <value>0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_ixii2_ixconnect_ixc_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FR:Error</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2015-11-16 19:40:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b10cb24d6f7746007a31e0526e3ee4cb</sys_id>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2015-12-09 19:37:22</sys_updated_on>
+            <value>9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_ixii2_ixconnect_ixc_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TR:Error</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2015-11-16 19:40:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d5fbfa0d6f7746007a31e0526e3ee441</sys_id>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2015-12-09 19:37:22</sys_updated_on>
+            <value>8</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_ixii2_ixconnect_ixc_state</element>
+            <name>incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2015-11-16 19:39:16</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a68fc5a0db3312000fc8f11fbf9619c3</sys_id>
+            <sys_mod_count>37</sys_mod_count>
+            <sys_name>x_ixii2_ixconnect_ixc_state</sys_name>
+            <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+            <sys_update_name>sys_choice_incident_x_ixii2_ixconnect_ixc_state</sys_update_name>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-05-20 11:34:27</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

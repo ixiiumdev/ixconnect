@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ixii2_ixconnect_ixqueue</collection>
+        <condition/>
+        <description/>
+        <execute_function>true</execute_function>
+        <filter_condition table="x_ixii2_ixconnect_ixqueue">stateCHANGESTORetried^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="Retried"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>ixc-queueRetry</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[function onAfter(current, previous) {
+	var dbg = new x_ixii2_ixconnect.ixQDebug();
+	dbg.debug('RetryQueue started for record: ' + current.number);
+	
+	//This function will be automatically called when this rule is processed.
+	
+	var saveMe = current;
+	var oldState = current.state;
+	var sid = current.sys_id;
+	
+	//set some fields on the current record before creating a new queue record
+	current.processed = new GlideDateTime().getDisplayValue();
+	current.update();
+	
+	if (typeof current.number != 'undefined' && current.number){
+		current.number = ""; // generate a new number
+	}
+	
+	current.processed = '';
+	current.setValue('state', 'Waiting');
+	current.queue = sid; //set reference back to queueID
+	current.insert();
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-02-19 10:43:31</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aa164ea337a9520053924bf954990e60</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>ixc-queueRetry</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_script_aa164ea337a9520053924bf954990e60</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-03-27 11:19:38</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=aa164ea337a9520053924bf954990e60"/>
+</record_update>

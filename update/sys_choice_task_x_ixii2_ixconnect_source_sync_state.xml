@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_ixii2_ixconnect_source_sync_state" table="task" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_ixii2_ixconnect_source_sync_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OK</label>
+            <language>en</language>
+            <name>task</name>
+            <sequence>10</sequence>
+            <sys_created_by>manuel</sys_created_by>
+            <sys_created_on>2016-02-14 10:46:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>37f024426fa9d2407a31e0526e3ee4bd</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-02-14 10:48:21</sys_updated_on>
+            <value>0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_ixii2_ixconnect_source_sync_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OK, With warnings</label>
+            <language>en</language>
+            <name>task</name>
+            <sequence>20</sequence>
+            <sys_created_by>manuel</sys_created_by>
+            <sys_created_on>2016-02-14 10:47:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8f31e8426fa9d2407a31e0526e3ee497</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-02-14 10:48:24</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_ixii2_ixconnect_source_sync_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Syncing</label>
+            <language>en</language>
+            <name>task</name>
+            <sequence>30</sequence>
+            <sys_created_by>manuel</sys_created_by>
+            <sys_created_on>2016-02-14 10:48:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7e5168426fa9d2407a31e0526e3ee442</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-02-14 10:48:26</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_ixii2_ixconnect_source_sync_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Error</label>
+            <language>en</language>
+            <name>task</name>
+            <sequence>40</sequence>
+            <sys_created_by>manuel</sys_created_by>
+            <sys_created_on>2016-02-14 10:48:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>98612c426fa9d2407a31e0526e3ee485</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-02-14 10:48:28</sys_updated_on>
+            <value>9</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_ixii2_ixconnect_source_sync_state</element>
+            <name>task</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>manuel</sys_created_by>
+            <sys_created_on>2016-02-14 10:47:59</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>fe8fc5a0db3312000fc8f11fbf9619ca</sys_id>
+            <sys_mod_count>18</sys_mod_count>
+            <sys_name>x_ixii2_ixconnect_source_sync_state</sys_name>
+            <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+            <sys_update_name>sys_choice_task_x_ixii2_ixconnect_source_sync_state</sys_update_name>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-05-20 11:34:31</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_ixii2_ixconnect.ixQueueTranslate</api_name>
+        <client_callable>false</client_callable>
+        <description>CDM Translation scripts</description>
+        <name>ixQueueTranslate</name>
+        <script><![CDATA[var ixQueueTranslate = Class.create();
+ixQueueTranslate.prototype = {
+	initialize: function() {
+	},
+	
+	//Used for outgoing translations to a different ServiceNow instance
+	outputTranslate: function(table,sysID,inc) {
+		
+		var list = {};
+		var mapFound = false;
+		
+		//look for fieldmappings related to tableparameter
+		var fm = new GlideRecord('x_ixii2_ixconnect_cdm_fieldmapping');
+		fm.addQuery('process', table);
+		fm.query();
+		while(fm.next()){
+			mapFound = false;
+			
+			//open related datamapping for fieldmapping
+			var dt = new GlideRecord('x_ixii2_ixconnect_cdm_datamapping');
+			dt.addQuery('field', fm.sys_id);
+			dt.addQuery('mapping_direction', 2); //outgoing
+			dt.query();
+			while(dt.next()){
+				//check if the field is on the incident form
+				if (dt.translated_value.getDisplayValue() == inc.getDisplayValue(fm.source_field)) {
+					mapFound = true;
+					list[fm.cdm_field.getDisplayValue()] = dt.value.getDisplayValue();
+				}
+			}
+		}
+		
+		//continue to fill the object with the no translation fields and text fields
+		fm = new GlideRecord('x_ixii2_ixconnect_cdm_fieldmapping');
+		fm.addQuery('process', table);
+		fm.addQuery('no_translation', true);
+		fm.query();
+		while(fm.next()){
+			if(fm.source_type == 'reference'){
+				list[fm.cdm_field.getDisplayValue()] = inc[fm.source_field].getDisplayValue();
+			}else{
+				list[fm.cdm_field.getDisplayValue()] = inc[fm.source_field].toString();
+			}
+		}
+		
+		
+		/*
+ 		** Start developing script field type to return scripted values **
+ 		** Author: ML
+ 		** Release: IXConnect 4.0
+ 		** Updated: 04-05-2016 - Manuel Panman
+ 		** UpdateNote: Bug fixing in quick release, critical bug supporting multiple process translation
+ 		*/
+		
+		
+		/*
+		//script type needs to be populated in the list
+		var evaluator = new GlideScopedEvaluator();
+		var input = '';
+		
+		// set input
+		if(fm.source_type == 'reference'){
+			input = inc[fm.source_field].getDisplayValue();
+		}else{
+			input = inc[fm.source_field].toString();
+		}
+		
+		evaluator.putVariable('input', input); // push input to the evaluator to be used in the script
+		
+		
+		fm = new GlideRecord('x_ixii2_ixconnect_cdm_fieldmapping');
+		fm.addQuery('use_script', true);
+		fm.query();
+		while(fm.next()){
+			
+			
+			evaluator.evaluateScript(fm, 'script', null);
+			list[fm.cdm_field.getDisplayValue()] = evaluator.getVariable('result'); //script must contain a variable result with the result
+			
+			
+			list[fm.cdm_field.getDisplayValue()] = eval(fm.script);
+		}
+		
+		
+ 		** END OF SCRIPT FIELD TYPE
+ 		*/
+		
+		
+		fm = new GlideRecord('x_ixii2_ixconnect_cdm_fieldmapping');
+		fm.addQuery('process', table);
+		fm.addQuery('sendattachments', true);
+		fm.query();
+		if(fm.next()){
+			var attCount = 0;
+			var  gr = new GlideRecord('sys_attachment');
+			gr.addQuery('table_sys_id', sysID);
+			gr.addQuery('table_name', table);
+			gr.query();
+			
+			while (gr.next()){
+				var send = this._attachmentCheck(gr.table_sys_id, gr.table_name, gr.file_name);
+				if(send){
+					attCount++;
+					var sa = new GlideSysAttachment();
+					var binData =  sa.getContent(gr);
+					var encodedS = gs.base64Encode(binData);
+					list['$att'+attCount.toString()+'$'] = gr.file_name + ';' + encodedS;
+				}else{
+					gs.info('IXConnect attachment: ' + gr.file_name + ' already sent');
+				}
+			}
+		}
+		
+		
+		//return the complete list as an object
+		return list;
+	},
+	
+	//Used for incoming translations to translate payload from IXQueue
+	inputTranslate: function(data, QID) {
+		var arr = [];
+		var tabel = '';
+		var filter = "";
+		for (var key in data.Data){
+			if(data.Data[key] != '' && data.Data[key] != null){
+				filter += key + ",";
+			}
+		}
+		
+		//gs.info("***MJL : " + filter);
+		//gs.info('MJLL ' + global.JSON.stringify(data));
+		
+		//get all CDM fieldmappings from this instance
+		var fm = new GlideRecord('x_ixii2_ixconnect_cdm_fieldmapping');
+		fm.addEncodedQuery('cdm_process.name=' + data.Header.Process.toString().toLowerCase() + '^is_reference=false^no_translation=false^cdm_field.cdm_fieldIN' + filter);
+		fm.query();
+		while(fm.next()){
+				
+			//open related datamapping for incoming direction
+			var dt = new GlideRecord('x_ixii2_ixconnect_cdm_datamapping');
+			dt.addQuery('field', fm.sys_id);
+			dt.addQuery('mapping_direction', 1); //incoming
+			dt.query();
+			
+			var found = false;
+			
+			while(dt.next()){
+				//if the CDM field is in the object push the values as object to the array
+				if(data.Data[fm.cdm_field.getDisplayValue()] == dt.value.getDisplayValue()){
+					found = true;
+					arr.push({
+						"field_name":fm.source_field.toString(),
+						"value": dt.translated_value.value.toString()
+					});
+					break;
+				}
+			}
+			if (!found) {
+				tabel = 'x_ixii2_ixconnect_fr';
+				
+				//allowcreation can be used to prevent tickets to be created when translation missing
+				var allowCreation = gs.getProperty('x_ixii2_ixconnect.tickets.createWarning');
+				var siRsp = new x_ixii2_ixconnect.ixQueueConnect();
+				var cdmField = fm.cdm_field.getDisplayValue();
+				var cdmData = data.Data[fm.cdm_field.getDisplayValue()];
+				
+				siRsp.createInternalResponse(tabel,'200',QID, cdmField, cdmData,null,null);
+			}
+		}
+		
+		//continue to fill the object with text fields
+		fm = new GlideRecord('x_ixii2_ixconnect_cdm_fieldmapping');
+		fm.addEncodedQuery('cdm_process.name=' + data.Header.Process.toString().toLowerCase() + '^is_reference=false^no_translation=true^cdm_field.cdm_fieldIN' + filter);
+		fm.query();
+		while(fm.next()){
+			arr.push({
+				"field_name":fm.source_field.toString(),
+				"value": data.Data[fm.cdm_field.getDisplayValue()]
+			});
+		}
+		
+		//continue to fill the reference fields
+		fm = new GlideRecord('x_ixii2_ixconnect_cdm_fieldmapping');
+		fm.addEncodedQuery('cdm_process.name=' + data.Header.Process.toString().toLowerCase() + '^is_reference=true^no_translation=false^cdm_field.cdm_fieldIN' + filter);
+		fm.query();
+		while(fm.next()){
+			arr.push({
+				"field_name":fm.source_field.toString(),
+				"value": this._getReferenceID(fm.reference_table, fm.reference_identifier, data.Data[fm.cdm_field.getDisplayValue()])
+			});
+		}
+		
+		//return the complete array
+		return arr;
+	},
+	
+	_getReferenceID: function(table, identifier, value){
+		var gr = new GlideRecord(table);
+		gr.addQuery(identifier, value);
+		gr.query();
+		if(gr.next()){
+			return gr.sys_id;
+		}
+		
+	},
+	
+	_attachmentCheck: function(identifier, table, filename){
+		var gr = new GlideRecord('x_ixii2_ixconnect_attachment_processor');
+		gr.addQuery('file_name', filename);
+		gr.addQuery('incident_id', identifier);
+		gr.query();
+		if(gr.next()){
+			//Already sent, no need for sending
+			return false;
+		}
+		else{
+			gr.initialize();
+			gr.file_name = filename;
+			gr.incident_id = identifier;
+			gr.setValue('connect_state', 'Sent');
+			gr.insert();
+			
+			//Not send yet and created for tracking attachment sending
+			return true;
+		}
+	},
+	
+	type: 'ixQueueTranslate'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2015-11-24 13:43:03</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c1f6fe2f6ff742007a31e0526e3ee460</sys_id>
+        <sys_mod_count>183</sys_mod_count>
+        <sys_name>ixQueueTranslate</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_script_include_c1f6fe2f6ff742007a31e0526e3ee460</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-05-24 08:38:03</sys_updated_on>
+    </sys_script_include>
+</record_update>

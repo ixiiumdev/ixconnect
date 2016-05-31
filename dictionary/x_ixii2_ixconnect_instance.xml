@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Instance" max_length="40" name="x_ixii2_ixconnect_instance" type="collection">
+        <element label="Current instance" max_length="40" name="current_instance" read_only="true" type="boolean"/>
+        <element display="true" label="ID" max_length="40" name="id" type="string"/>
+        <element label="IXConnect" max_length="40" name="ixconnect" type="boolean"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Password" max_length="40" name="password" read_only="true" type="password"/>
+        <element label="URL" max_length="1024" name="url" type="url"/>
+        <element label="Username" max_length="40" name="username" read_only="true" type="string"/>
+    </element>
+</database>

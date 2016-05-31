@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="CDM Values" max_length="40" name="x_ixii2_ixconnect_cdm_values" type="collection">
+        <element label="CDM Process" max_length="32" name="cdm_process" reference="x_ixii2_ixconnect_cdm_process" type="reference"/>
+        <element label="ID" max_length="40" name="id" read_only="true" type="string"/>
+        <element label="CDM Fieldname" max_length="32" name="id_cdm" read_only="true" reference="x_ixii2_ixconnect_cdm" type="reference"/>
+        <element display="true" label="Value" max_length="40" name="value" read_only="true" type="string"/>
+        <index name="index">
+            <element name="id_cdm"/>
+        </index>
+        <index name="index2">
+            <element name="cdm_process"/>
+        </index>
+    </element>
+</database>

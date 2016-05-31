@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="Requests" max_length="40" name="x_ixii2_ixconnect_requests" type="collection">
+        <element label="Requested by" max_length="32" name="requested_by" read_only="true" reference="sys_user" type="reference"/>
+    </element>
+</database>

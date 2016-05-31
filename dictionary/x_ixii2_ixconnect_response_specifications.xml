@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Response Specifications" max_length="40" name="x_ixii2_ixconnect_response_specifications" type="collection">
+        <element label="Actions" max_length="4000" name="actions" type="string"/>
+        <element label="Code" max_length="40" name="code" type="string" unique="true"/>
+        <element display="true" label="Description" max_length="400" name="error_description" type="string"/>
+        <index name="index">
+            <element name="code"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="x_ixii2_ixconnect_target_queueid" label="Target QueueID" language="en" table="task">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_ixii2_ixconnect_target_queueid</element>
+            <help/>
+            <hint/>
+            <label>Target QueueID</label>
+            <language>en</language>
+            <name>task</name>
+            <plural>Target QueueIDs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>manuel</sys_created_by>
+            <sys_created_on>2016-02-14 09:26:52</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>4cce844e6f69d2407a31e0526e3ee467</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Target QueueID</sys_name>
+            <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+            <sys_update_name>sys_documentation_task_x_ixii2_ixconnect_target_queueid_en</sys_update_name>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-02-14 09:26:52</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

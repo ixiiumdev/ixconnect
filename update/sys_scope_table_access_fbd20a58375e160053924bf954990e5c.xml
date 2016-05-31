@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_table_access">
+    <sys_scope_table_access action="INSERT_OR_UPDATE">
+        <create_access>true</create_access>
+        <delete_access>false</delete_access>
+        <example_stack_trace>Default-thread-206
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.getCurrentStackTrace(ScopeAccessProvider.java:231)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.record(ScopeAccessProvider.java:200)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.access$100(ScopeAccessProvider.java:80)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider.recordAccess(ScopeAccessProvider.java:63)
+	com.glide.sys.fencing.dependency.ScopeAccessRecorder.record(ScopeAccessRecorder.java:13)
+	com.glide.script.fencing.access.ScopedTableAccess.hasRightsTo(ScopedTableAccess.java:79)
+	com.glide.script.fencing.access.ScopedTableAccess.hasRightsToTable(ScopedTableAccess.java:39)
+	com.glide.script.fencing.ScopedGlideRecord.jsFunction_insert(ScopedGlideRecord.java:139)
+	sun.reflect.GeneratedMethodAccessor960.invoke(Unknown Source)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	java.lang.reflect.Method.invoke(Method.java:597)
+	org.mozilla.javascript.FunctionObject.doInvoke(FunctionObject.java:597)
+	org.mozilla.javascript.FunctionObject.call(FunctionObject.java:504)
+	org.mozilla.javascript.ScriptRuntime.call(ScriptRuntime.java:1227)
+	org.mozilla.javascript.gen.c3794.call(sys_script_include.d41c07016fb746007a31e0526e3ee43d:149)
+	org.mozilla.javascript.ScriptRuntime.call(ScriptRuntime.java:1227)
+	org.mozilla.javascript.gen.c2213.call(sys_script.96564c0c6fc852007a31e0526e3ee409:17)
+	org.mozilla.javascript.optimizer.OptRuntime.callSimple(OptRuntime.java:297)
+	org.mozilla.javascript.gen.c2214.call(sys_script.96564c0c6fc852007a31e0526e3ee409:37)
+	org.mozilla.javascript.gen.c2214.exec(sys_script.96564c0c6fc852007a31e0526e3ee409)
+	com.glide.script.ScriptEvaluator.execute(ScriptEvaluator.java:233)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:105)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:72)
+	com.glide.script.BusinessRule.runScript(BusinessRule.java:346)
+	com.glide.script.BusinessRule.runSyncBusinessRule(BusinessRule.java:258)
+	com.glide.script.BusinessRule.runBusinessRule(BusinessRule.java:170)
+	com.glide.script.BusinessRule.run(BusinessRule.java:146)
+	com.glide.script.GlideRecordBusinessRules.run(GlideRecordBusinessRules.java:85)
+	com.glide.script.GlideRecord.runScripts(GlideRecord.java:1159)
+	com.glide.script.GlideRecord.runScriptsAndEngines(GlideRecord.java:1109)
+	com.glide.script.GlideRecord.insert(GlideRecord.java:4352)
+	com.glide.script.GlideRecord.insert(GlideRecord.java:4298)
+	com.glide.script.GlideRecord.jsFunction_insert(GlideRecord.java:4717)
+	sun.reflect.GeneratedMethodAccessor78.invoke(Unknown Source)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	java.lang.reflect.Method.invoke(Method.java:597)
+	org.mozilla.javascript.FunctionObject.doInvoke(FunctionObject.java:597)
+	org.mozilla.javascript.FunctionObject.call(FunctionObject.java:504)
+	org.mozilla.javascript.ScriptRuntime.call(ScriptRuntime.java:1227)
+	org.mozilla.javascript.gen.c3418.call(&lt;refname&gt;:8)
+	org.mozilla.javascript.optimizer.OptRuntime.callSimple(OptRuntime.java:297)
+	org.mozilla.javascript.gen.c3419.call(&lt;refname&gt;:1)
+	org.mozilla.javascript.gen.c3419.exec(&lt;refname&gt;)
+	com.glide.script.ScriptEvaluator.execute(ScriptEvaluator.java:233)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:105)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:72)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:63)
+	com.glide.script.Evaluator.evaluateString(Evaluator.java:91)
+	com.glide.script.GlideRhinoHelper.evaluateAsString(GlideRhinoHelper.java:130)
+	com.glide.script.ActionScript.conditionalEval(ActionScript.java:83)
+	com.glide.script.ActionScript.execute(ActionScript.java:69)
+	com.glide.script.ActionScriptProcessor.processScript(ActionScriptProcessor.java:125)
+	com.glide.script.Action.process(Action.java:115)
+	com.glide.ui.RedirectTransaction.invokeAction(RedirectTransaction.java:418)
+	com.glide.ui.RedirectTransaction.handleActions(RedirectTransaction.java:387)
+	com.glide.ui.RedirectTransaction.inboundActions(RedirectTransaction.java:223)
+	com.glide.ui.RedirectTransaction.process(RedirectTransaction.java:92)
+	com.glide.ui.GlideServletUITransaction.process(GlideServletUITransaction.java:68)
+	com.glide.processors.Processor.runProcessor(Processor.java:402)
+	com.glide.processors.Processor.processTransaction(Processor.java:192)
+	com.glide.processors.ProcessorRegistry.process(ProcessorRegistry.java:146)
+	com.glide.ui.GlideServletTransaction.process(GlideServletTransaction.java:36)
+	com.glide.ui.GlideServlet$1.run(GlideServlet.java:414)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	java.lang.Thread.run(Thread.java:682)
+</example_stack_trace>
+        <read_access>true</read_access>
+        <source_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</source_scope>
+        <sys_class_name>sys_scope_table_access</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-03-17 14:11:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fbd20a58375e160053924bf954990e5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>problem</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_scope_table_access_fbd20a58375e160053924bf954990e5c</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-03-17 14:11:56</sys_updated_on>
+        <table_name>problem</table_name>
+        <target_scope display_value="Global">global</target_scope>
+        <write_access>true</write_access>
+    </sys_scope_table_access>
+</record_update>

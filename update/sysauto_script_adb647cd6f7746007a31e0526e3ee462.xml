@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>IXQueueCleanup</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>30</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2015-11-16 20:26:48</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>monthly</run_type>
+        <script><![CDATA[/*
+** Scheduled script to cleanup the heartbeat table, IXQueue table & Import set tables
+** The IXConnect properties will be used to determine how long records needs to be stored in the tables.
+ */
+
+
+/*
+ ** Clean up Import Set Tables
+ */
+cleanUpImportSet('x_ixii2_ixconnect_api_cdm_values');
+cleanUpImportSet('x_ixii2_ixconnect_api_cdm');
+cleanUpImportSet('x_ixii2_ixconnect_api_server');
+cleanUpImportSet('x_ixii2_ixconnect_api_fr');
+cleanUpImportSet('x_ixii2_ixconnect_api_ixqueue');
+cleanUpImportSet('x_ixii2_ixconnect_api_tr');
+
+
+//get application preferences based on properties
+var kQ = gs.getProperty('x_ixii2_ixconnect.keepQueue');
+if(kQ > 0){
+	cleanUpIXQueue(kQ);
+	gs.info('**IXCONNECT** IXQueue cleanup finished: ' + kQ + ' days removed');
+}
+
+var hB = gs.getProperty('x_ixii2_ixconnect.keepHeartbeats');
+if(hB > 0){
+	cleanUpHeartBeat(hB);
+	gs.info('**IXCONNECT** Heartbeats cleanup finished: ' + hB + ' days removed');
+}
+
+//clean up the IXQueue
+function cleanUpIXQueue(interval){
+	var days = gs.daysAgo(interval);
+	var ixc = new GlideRecord('x_ixii2_ixconnect_ixqueue');
+	ixc.addQuery('sys_created_on', '>=', days);
+	ixc.query();
+	ixc.deleteMultiple();
+}
+
+//clean up the heartbeat table
+function cleanUpHeartBeat(interval){
+	var days = gs.daysAgo(interval);
+	var ixc = new GlideRecord('x_ixii2_ixconnect_heartbeat');
+	ixc.addQuery('sys_created_on', '>=', days);
+	ixc.query();
+	ixc.deleteMultiple();
+}
+
+//clean up the import set tables
+function cleanUpImportSet(tbl){
+	var gr = new GlideRecord(tbl);
+	gr.addQuery('sys_created_on', '>=', gs.daysAgo(1));
+	gr.query();
+	gr.deleteMultiple();
+	gs.info('**IXCONNECT** Cleanup finished for table: ' + tbl);
+}
+
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2015-11-16 20:46:05</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>adb647cd6f7746007a31e0526e3ee462</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>IXQueueCleanup</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sysauto_script_adb647cd6f7746007a31e0526e3ee462</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-03-22 13:02:36</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

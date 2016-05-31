@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Heartbeat" max_length="40" name="x_ixii2_ixconnect_heartbeat" type="collection">
+        <element label="Hostname" max_length="40" name="hostname" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element choice="1" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element label="Processed" sequence="1" value="2"/>
+                <element label="Waiting" sequence="2" value="1"/>
+            </choice>
+        </element>
+        <element label="Topic" max_length="40" name="topic" type="string"/>
+    </element>
+</database>

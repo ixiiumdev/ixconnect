@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="sys_portal_page" unload_date="2016-05-31 18:51:16">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout display_value="layout_2_across_knowledge">46978421370031002d2440ed9dbe5db7</layout>
+        <order/>
+        <read_roles/>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-04-07 18:56:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>794d4bcb37aa9200ed08c74a54990eca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>My IXCore Dashboard</sys_name>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-04-07 18:56:08</sys_updated_on>
+        <title>My IXCore Dashboard</title>
+        <user display_value="">7f54029e0f57d200c1e08e8ce1050eed</user>
+        <view/>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone1</dropzone>
+                <offset>0</offset>
+                <page display_value="My IXCore Dashboard">794d4bcb37aa9200ed08c74a54990eca</page>
+                <summary/>
+                <sys_created_by>manuel</sys_created_by>
+                <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                <sys_id>e01fd2200f231200c1e08e8ce1050e63</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>manuel</sys_updated_by>
+                <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">e01fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>241fd2200f231200c1e08e8ce1050e63</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>IXCore total connected incidents</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">e01fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>281fd2200f231200c1e08e8ce1050e63</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>6619f7626fa116407a31e0526e3ee410</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">e01fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>2c1fd2200f231200c1e08e8ce1050e63</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>131337226fa116407a31e0526e3ee43c</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">e01fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>a41fd2200f231200c1e08e8ce1050e63</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">e01fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>a81fd2200f231200c1e08e8ce1050e63</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderDashboard</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone2</dropzone>
+                <offset>0</offset>
+                <page display_value="My IXCore Dashboard">794d4bcb37aa9200ed08c74a54990eca</page>
+                <summary/>
+                <sys_created_by>manuel</sys_created_by>
+                <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                <sys_id>ec1fd2200f231200c1e08e8ce1050e63</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>manuel</sys_updated_by>
+                <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">ec1fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>201fd2200f231200c1e08e8ce1050e64</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>IXCore total transactions</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">ec1fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>241fd2200f231200c1e08e8ce1050e64</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>8934f7226fa116407a31e0526e3ee49a</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">ec1fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>281fd2200f231200c1e08e8ce1050e64</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>131337226fa116407a31e0526e3ee43c</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">ec1fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>a01fd2200f231200c1e08e8ce1050e64</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2016-05-19 07:12:06">ec1fd2200f231200c1e08e8ce1050e63</portal_section>
+                        <sys_created_by>manuel</sys_created_by>
+                        <sys_created_on>2016-05-19 14:12:06</sys_created_on>
+                        <sys_id>a41fd2200f231200c1e08e8ce1050e64</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>manuel</sys_updated_by>
+                        <sys_updated_on>2016-05-19 14:12:06</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderDashboard</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>

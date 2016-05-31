@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="IXQueue" max_length="40" name="x_ixii2_ixconnect_ixqueue" type="collection">
+        <element label="Agent" max_length="40" name="agent" read_only="true" type="string"/>
+        <element label="Error string" max_length="40" name="error_string" type="string"/>
+        <element label="From host" max_length="40" name="from_host" type="string"/>
+        <element label="IncidentID" max_length="32" name="incidentid" read_only="true" reference="task" type="reference"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Payload" max_length="1048576" name="payload" type="string"/>
+        <element label="Processed" max_length="40" name="processed" read_only="true" type="glide_date_time"/>
+        <element label="Queue" max_length="32" name="queue" reference="x_ixii2_ixconnect_ixqueue" type="reference"/>
+        <element label="Source" max_length="40" name="source" type="string"/>
+        <element choice="1" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element label="Processed" sequence="0" value="Processed"/>
+                <element label="Retried" sequence="0" value="Retried"/>
+                <element label="Processing" sequence="1" value="Processing"/>
+                <element label="Waiting" sequence="2" value="Waiting"/>
+                <element label="Error" sequence="3" value="Error"/>
+            </choice>
+        </element>
+        <element label="Topic" max_length="40" name="topic" type="string"/>
+        <index name="index">
+            <element name="incidentid"/>
+        </index>
+        <index name="index2">
+            <element name="queue"/>
+        </index>
+    </element>
+</database>

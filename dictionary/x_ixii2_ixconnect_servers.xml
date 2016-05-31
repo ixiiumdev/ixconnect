@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="IXCore servers" max_length="40" name="x_ixii2_ixconnect_servers" type="collection">
+        <element label="Description" max_length="400" name="description" type="string"/>
+        <element label="Host name" max_length="100" name="host_name" type="string"/>
+        <element label="Host OS" max_length="100" name="host_os" type="string"/>
+        <element label="IP address" max_length="40" name="ip_address" type="string"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Network" max_length="40" name="network" type="string"/>
+        <element label="Router" max_length="40" name="router" type="string"/>
+        <element label="Started" max_length="40" name="started" type="glide_date_time"/>
+        <element choice="3" default="Stopped" label="Status" max_length="40" name="status" type="string">
+            <choice>
+                <element label="Running" sequence="1" value="1"/>
+                <element label="Stopped" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element label="Stopped" max_length="40" name="stopped" type="glide_date_time"/>
+    </element>
+</database>

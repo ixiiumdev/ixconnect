@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Response" max_length="40" name="x_ixii2_ixconnect_responses" type="collection">
+        <element label="Code" max_length="40" name="code" reference="x_ixii2_ixconnect_response_specifications" type="reference"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element label="Error detail" max_length="80" name="error_detail" type="string"/>
+        <element label="IXQueue" max_length="32" name="ixqueue" reference="x_ixii2_ixconnect_ixqueue" type="reference"/>
+        <element label="Ticket reference" max_length="32" name="ticket_reference" reference="incident" type="reference"/>
+        <index name="index">
+            <element name="ixqueue"/>
+        </index>
+        <index name="index2">
+            <element name="code"/>
+        </index>
+        <index name="index3">
+            <element name="ticket_reference"/>
+        </index>
+    </element>
+</database>

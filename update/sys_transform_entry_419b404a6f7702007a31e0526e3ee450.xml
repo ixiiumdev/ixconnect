@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>ignore</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd hh:mm:ss</date_format>
+        <map display_value="ixTransform-FR">7b049b816fb746007a31e0526e3ee45e</map>
+        <reference_value_field/>
+        <source_field>u_code</source_field>
+        <source_script/>
+        <source_table>x_ixii2_ixconnect_api_fr</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2015-11-19 09:23:07</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>419b404a6f7702007a31e0526e3ee450</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>u_code</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_transform_entry_419b404a6f7702007a31e0526e3ee450</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-03-02 14:36:25</sys_updated_on>
+        <target_field>code</target_field>
+        <target_table>x_ixii2_ixconnect_fr</target_table>
+        <use_source_script>false</use_source_script>
+    </sys_transform_entry>
+</record_update>

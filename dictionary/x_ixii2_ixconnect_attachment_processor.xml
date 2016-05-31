@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Attachment Processor" max_length="40" name="x_ixii2_ixconnect_attachment_processor" type="collection">
+        <element label="Connect State" max_length="40" name="connect_state" type="string"/>
+        <element label="File Name" max_length="240" name="file_name" type="string"/>
+        <element label="Incident ID" max_length="120" name="incident_id" type="string"/>
+    </element>
+</database>

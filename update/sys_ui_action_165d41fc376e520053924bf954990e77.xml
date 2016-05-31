@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>register_current_instance</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition>var gr = new GlideRecord('x_ixii2_ixconnect_instance'); gr.query('current_instance', true); gr.getRowCount() == 0;</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <name>Register Current Instance</name>
+        <onclick>serverside()</onclick>
+        <order>100</order>
+        <script><![CDATA[serverside();
+
+function serverside(){
+	var gr = new GlideRecord("x_ixii2_ixconnect_instance");
+	gr.initialize();
+	
+	var url = gs.getProperty('glide.servlet.uri');
+	var id = extractDomain(url);
+	
+	gr.url = url;
+	gr.id =  id;
+	gr.name = id.replace(".service-now.com", "");
+	gr.current_instance = true;
+	
+	gr.insert();
+}
+
+function extractDomain(url) {
+	var domain;
+	//find & remove protocol (http, ftp, etc.) and get domain
+	if (url.indexOf("://") > -1) {
+		domain = url.split('/')[2];
+	}
+	else {
+		domain = url.split('/')[0];
+	}
+	
+	return domain;
+}
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>matthijs</sys_created_by>
+        <sys_created_on>2016-03-31 09:51:35</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>165d41fc376e520053924bf954990e77</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>Register Current Instance</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_ui_action_165d41fc376e520053924bf954990e77</sys_update_name>
+        <sys_updated_by>matthijs</sys_updated_by>
+        <sys_updated_on>2016-03-31 11:52:07</sys_updated_on>
+        <table>x_ixii2_ixconnect_instance</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

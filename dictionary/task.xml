@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="reference_index_include=active,all_tables.live_feed=true,all_tables.detail_row=short_description,all_tables.display_color=priority,text_index_translations=true,extension_model=hierarchy,hasListeners=true,largeTable=true" label="Task" max_length="40" name="task" sizeclass="336" text_index="true" type="collection">
+        <element label="Assign external" max_length="40" name="x_ixii2_ixconnect_assign_external" type="boolean"/>
+        <element label="Source identifier" max_length="40" name="x_ixii2_ixconnect_source_identifier" read_only="true" type="string"/>
+        <element label="Source instance" max_length="32" name="x_ixii2_ixconnect_source_instance" read_only="true" reference="x_ixii2_ixconnect_instance" type="reference"/>
+        <element label="Source QueueID" max_length="32" name="x_ixii2_ixconnect_source_queueid" read_only="true" reference="x_ixii2_ixconnect_ixqueue" type="reference"/>
+        <element label="Source reference" max_length="32" name="x_ixii2_ixconnect_source_reference" reference="x_ixii2_ixconnect_instance" type="reference"/>
+        <element choice="1" label="Source sync state" max_length="40" name="x_ixii2_ixconnect_source_sync_state" read_only="true" type="choice">
+            <choice>
+                <element label="OK" sequence="10" value="0"/>
+                <element label="OK, With warnings" sequence="20" value="1"/>
+                <element label="Syncing" sequence="30" value="2"/>
+                <element label="Error" sequence="40" value="9"/>
+            </choice>
+        </element>
+        <element label="Sync" max_length="40" name="x_ixii2_ixconnect_sync" type="boolean"/>
+        <element label="Target identifier" max_length="40" name="x_ixii2_ixconnect_target_identifier" read_only="true" type="string"/>
+        <element choice="1" label="Target instance" max_length="32" name="x_ixii2_ixconnect_target_instance" reference="x_ixii2_ixconnect_instance" reference_qual="ixconnect=true^current_instance=false^EQ" reference_qual_condition="ixconnect=true^current_instance=false^EQ" type="reference">
+            <choice/>
+        </element>
+        <element label="Target QueueID" max_length="32" name="x_ixii2_ixconnect_target_queueid" read_only="true" reference="x_ixii2_ixconnect_ixqueue" type="reference"/>
+        <element choice="1" label="Target sync state" max_length="40" name="x_ixii2_ixconnect_target_sync_state" read_only="true" type="choice">
+            <choice>
+                <element label="OK" sequence="10" value="0"/>
+                <element label="OK, With warnings" sequence="20" value="1"/>
+                <element label="Syncing" sequence="30" value="2"/>
+                <element label="Error" sequence="40" value="9"/>
+            </choice>
+        </element>
+    </element>
+</database>

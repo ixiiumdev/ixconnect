@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>system</category>
+        <format>png</format>
+        <height>16</height>
+        <image/>
+        <name>statuson16.png</name>
+        <size_bytes>764</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-02-16 11:03:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a90872666f6116407a31e0526e3ee413</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>statuson16.png</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>db_image_a90872666f6116407a31e0526e3ee413</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-02-16 11:03:49</sys_updated_on>
+        <thumbnail/>
+        <width>16</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <file_name>image</file_name>
+        <image_height/>
+        <image_width/>
+        <size_bytes>764</size_bytes>
+        <size_compressed>787</size_compressed>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-02-16 11:03:49</sys_created_on>
+        <sys_id>fb18fe266f6116407a31e0526e3ee490</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-02-16 11:03:49</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>a90872666f6116407a31e0526e3ee413</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="fb18fe266f6116407a31e0526e3ee490">fb18fe266f6116407a31e0526e3ee490</sys_attachment>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-02-16 11:03:49</sys_created_on>
+        <sys_id>3f18fe266f6116407a31e0526e3ee490</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>AfwCA/2JUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAr8g3BYrpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAo5JREFUeNqkk8tr1FAUxr+8M3nMZDozZarVOiK4EqSiXYmLdulOCv0HunAtWnzQFoQivhdKFy6kG926EFy04MKVSFUsVmipyLS0Dp10Xs00k8fEk2R0lLrrgZuE5Jwvv/udc5kgCHCQ4MMLwzDdN9PohYencHGe8ZlcgICFABMi3kPCVdzA8t8CTEjwR2ASl9km+7hwtCAOnRyCoRiYXZ5F4BNlk743SJrDQ8qb+IegUzwu2MKT0eFRNqklYbkWynYZPMsTjAvolKNS/g6uYQZtIrneJbjPqMxPxhwbHpMM3UDVqcK0TRR3i1iprUCTJciiCJZIPa+N+kbTc3jvHK7gU0xQw6NCf0HKG3mYLRNr9TUsbi9CEnkM5LIwVBWqJIFjWTieB1No8Nvbu7craFyMBTwMDx4fhNN2IvSwWBQ49Pf0oC+dRi6ZhJ5IRAIt10VG1xHYmxdIoONBgKyqqSjtlbBaW4Uf+FSUjor7MxkcontIIXAc9hwH5UYDtVJTk18L6ViAQTC3MgewsZ8J2q+hKOjRNORTKRwhkT7hGGRoqChbEPlNrOtlcL4UxAIctuAgRRlRyIIQmabQvpMklBP6cAJDICYU8QWWUoWWkOuvzn6oxv8U8Sbq8+/hILfDxXYWR5MkQUESWXpKoGm5kGRxPsyNBWRMwUY9bHcYodMOmWXTslotVAjwBz5jCQtYb39Daafms357qjtIE2TnHYzTkLxABlxYVLdtVC0rMkzkedjaR7DUhY3NHVT3dm89O/326/5RvotLRPGcKPVURsFAbxaHycCMqhM6B8/1bc8PJl+eeXfv/2chjBli4HGTWjuS0pRTaV2FoamrSkKaVwTxwcLI0vd9h+kg8UuAAQBFc/TiA8q16gAAAABJRU5ErkJggsxgS5H8AgAA</data>
+        <length>1036</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="fb18fe266f6116407a31e0526e3ee490">fb18fe266f6116407a31e0526e3ee490</sys_attachment>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-02-16 11:03:49</sys_created_on>
+        <sys_id>7f18fe266f6116407a31e0526e3ee490</sys_id>
+    </sys_attachment_doc>
+</record_update>

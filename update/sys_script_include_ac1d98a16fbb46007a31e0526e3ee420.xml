@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_ixii2_ixconnect.ixcDataValidation</api_name>
+        <client_callable>false</client_callable>
+        <description>Script include used to define field type for selected values.&#13;
+Based on field type passing the right values into the choicelist</description>
+        <name>ixcDataValidation</name>
+        <script><![CDATA[var ixcDataValidation = Class.create();
+ixcDataValidation.prototype = {
+	initialize: function() {
+	},
+	
+	//define if our CDM field is a choicelist or a reference
+	dataValidation: function(tbl, fld){
+		var result;
+		var sid;
+		var ftype = this._defineFieldType(tbl, fld);
+		
+		//get choices from choice table when the type is a choicelist
+		if(ftype.result=='choiceList')
+			sid = this._getChoices(tbl, fld, sid);
+		
+		//get reference values from the referenced table
+		if(ftype.result=='reference')
+			sid = this._getReferenceValues(ftype.ref_table, sid);
+		
+		return 'sys_idIN' + sid;
+		
+	},
+	
+	processFilter: function(prcs){
+		var values = [];
+		var val = new GlideRecord('x_ixii2_ixconnect_cdm');
+		val.addQuery('cdm_process', prcs);
+		val.query();
+		while(val.next()) {
+			values.push(val.sys_id.toString());
+		}
+		
+		// return values where process is same as specified process to limit choices
+		return 'sys_idIN' + values.join();
+	},
+	
+	duplicateDataCheck: function(enc,dir){
+		//set up gliderecord to data mapping table and query for existing mappings
+		var dm = new GlideRecord('x_ixii2_ixconnect_cdm_datamapping');
+		var msg1 = 'Source value ';
+		dm.addEncodedQuery(enc+'^mapping_direction='+dir);
+		dm.query();
+		
+		//abort action when something is found and give back message
+		if(dm.hasNext()){
+			var msg0 = 'This translation is invalid. The ';
+			var msg2 = ' already has a translation for ';
+			var msg3 = current.mapping_direction.getDisplayValue().toLowerCase();
+			var msg4 = ' data';
+			
+			current.setAbortAction(true);
+		}
+		
+	},
+	
+	duplicateFieldCheck: function(enc){
+		//set up gliderecord to field mapping table and query for existing mappings
+		
+		var fm = new GlideRecord('x_ixii2_ixconnect_cdm_fieldmapping');
+		fm.addQuery('process', current.process);
+		fm.addQuery('source_field', current.source_field);
+		fm.query();
+		
+		//abort action when something is found and give back message
+		if(fm.hasNext()){
+			var msg0 = 'This field mapping is invalid. The field: ';
+			var msg1 = ' already has an existing mapping';
+			var fieldMsg = current.source_field.getDisplayValue();
+			
+			//abort action when field is already mapped
+			current.setAbortAction(true);
+		}
+	},
+	
+	getFieldSuperClass: function(table){
+		//find the parent of a table, if any.
+		
+		var prnt = new GlideRecord("sys_db_object");
+		prnt.addQuery("name", table);
+		prnt.query();
+		
+		if (prnt.next() && prnt.super_class != '') {
+			return prnt.super_class.name.toString();	
+		}else{
+			return '';
+		}
+	},
+	
+	//define the fieldtype based on it's dictionary details
+	_defineFieldType: function(table, field){
+		var dc = new GlideRecord('sys_dictionary');
+		dc.addQuery('name', table);
+		dc.addQuery('element', field);
+		dc.query();
+		
+		//without result it might be that the choices are defined a parent table, so we are going to get the parent table and call this function again
+		if(!dc.hasNext()){
+			var superclass = this.getFieldSuperClass(table);
+			
+			if(superclass != ''){
+				return this._defineFieldType(superclass, field);
+			}else{
+				return {'result': null};
+			}
+		}
+		if(dc.next()){
+			if(dc.choice!=0){
+				return {'result': 'choiceList'};
+			}
+			else if(dc.internal_type=='reference'){
+				//this part is under construction
+				//Try to pass the reference table and the qualifier condition to narrow down results
+				return {
+					'result': 'reference',
+					'ref_table': dc.reference,
+					'ref_condition': dc.reference_qual_condition
+				};
+			}
+		}else{
+			return {'result': null};
+		}
+	},
+	
+	//private function for retreiving all choices from the choicelist
+	_getChoices: function(table, field, sid){
+		var ch = new GlideRecord('sys_choice');
+		ch.addQuery('name', table);
+		ch.addQuery('inactive', false);
+		ch.addQuery('element', field);
+		ch.query();
+		//without result it might be that the choices are defined in the task table
+		if(!ch.hasNext()){
+			var superclass = this.getFieldSuperClass(table);
+			
+			if(superclass != ''){
+				return this._getChoices(superclass, field, sid);
+			}else{
+				return {'result': null};
+			}
+		}
+		//passing all choices back to the sid parameter
+		while(ch.next()){
+			sid += (',' + ch.sys_id);
+		}
+		
+		return sid;
+	},
+	
+	//private function to retreive all reference values
+	//this part is not working yet
+	_getReferenceValues: function(refTbl, sid){
+		var refVal = new GlideRecord(refTbl);
+		refVal.addQuery('active', true);
+		refVal.query();
+		while(refVal.next()){
+			sid += (',' + refVal.sys_id);}
+			
+			return sid;
+		},
+		
+		getCDMValues: function(cdmField){
+			var list = '';
+			
+			var cdmV = new GlideRecord('x_ixii2_ixconnect_cdm_values');
+			cdmV.addQuery('id_cdm', cdmField);
+			cdmV.query();
+			while(cdmV.next()){
+				list += (',' + cdmV.sys_id);
+			}
+			return 'sys_idIN' + list;
+		},
+		
+		type: 'ixcDataValidation'
+	};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2015-11-17 21:40:05</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>ac1d98a16fbb46007a31e0526e3ee420</sys_id>
+        <sys_mod_count>152</sys_mod_count>
+        <sys_name>ixcDataValidation</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_script_include_ac1d98a16fbb46007a31e0526e3ee420</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-05-20 14:33:17</sys_updated_on>
+    </sys_script_include>
+</record_update>

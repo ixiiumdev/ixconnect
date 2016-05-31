@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="IXC-FieldMapping" max_length="40" name="x_ixii2_ixconnect_cdm_fieldmapping" type="collection">
+        <element dependent="cdm_process" dependent_on_field="cdm_process" hint="Give up the IXConnect CDM field" label="CDM field" mandatory="true" max_length="32" name="cdm_field" reference="x_ixii2_ixconnect_cdm" type="reference" use_dependent_field="true"/>
+        <element choice="1" label="CDM Process" max_length="40" name="cdm_process" reference="x_ixii2_ixconnect_cdm_process" type="reference">
+            <choice/>
+        </element>
+        <element label="Is list" max_length="40" name="is_list" type="boolean"/>
+        <element label="Is Reference" max_length="40" name="is_reference" type="boolean"/>
+        <element display="true" label="Name" max_length="40" name="name" read_only="true" type="string"/>
+        <element label="No translation" max_length="40" name="no_translation" type="boolean"/>
+        <element choice="1" default="incident" label="Process/Table" max_length="40" name="process" type="table_name">
+            <choice>
+                <element label="Backlog Management" sequence="0" value="4"/>
+                <element label="Change Management" sequence="1" value="2"/>
+                <element label="Facility Management" sequence="2" value="5"/>
+                <element label="Incident Management" sequence="3" value="1"/>
+                <element label="Problem Management" sequence="4" value="3"/>
+            </choice>
+        </element>
+        <element dependent="reference_table" dependent_on_field="reference_table" label="Reference identifier" max_length="80" name="reference_identifier" type="field_name" use_dependent_field="true"/>
+        <element label="Reference Table" max_length="80" name="reference_table" type="table_name"/>
+        <element label="sendAttachments" max_length="40" name="sendattachments" type="boolean"/>
+        <element dependent="process" dependent_on_field="process" hint="Give up the ServiceNow field" label="Source field" max_length="40" name="source_field" type="field_name" use_dependent_field="true"/>
+        <element label="Source type" max_length="40" name="source_type" read_only="true" type="string"/>
+        <index name="index">
+            <element name="cdm_field"/>
+        </index>
+        <index name="index2">
+            <element name="cdm_process"/>
+        </index>
+    </element>
+</database>

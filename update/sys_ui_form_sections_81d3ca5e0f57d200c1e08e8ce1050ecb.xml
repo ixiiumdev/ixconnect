@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="81d3ca5e0f57d200c1e08e8ce1050ecb" sys_domain="global" table="task" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-05-12 12:26:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>85d3ca5e0f57d200c1e08e8ce1050ecb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="task" name="task" sys_domain="global" view="Default view">81d3ca5e0f57d200c1e08e8ce1050ecb</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="task" sys_domain="global" view="Default view">a08754b4c611228701f7be7b66a6e8a5</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-05-12 12:26:45</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-05-12 12:26:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>41d3ca5e0f57d200c1e08e8ce1050ed8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="task" name="task" sys_domain="global" view="Default view">81d3ca5e0f57d200c1e08e8ce1050ecb</sys_ui_form>
+            <sys_ui_section caption="IXConnect" display_value="IXConnect" name="task" sys_domain="global" view="Default view">00edc04e6f69d2407a31e0526e3ee4a9</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-05-12 12:26:45</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>task</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-05-12 12:26:45</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>81d3ca5e0f57d200c1e08e8ce1050ecb</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>task</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="System (apps/system_ui)" source="apps/system_ui">99547311db2312000fc8f11fbf9619ec</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+            <sys_update_name>sys_ui_form_sections_81d3ca5e0f57d200c1e08e8ce1050ecb</sys_update_name>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-05-20 11:34:27</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

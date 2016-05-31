@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Data Mapping" max_length="40" name="x_ixii2_ixconnect_cdm_datamapping" type="collection">
+        <element label="Field" max_length="32" name="field" read_only="true" reference="x_ixii2_ixconnect_cdm_fieldmapping" type="reference"/>
+        <element choice="1" label="Mapping Direction" mandatory="true" max_length="40" name="mapping_direction" type="string">
+            <choice>
+                <element label="Incoming" value="1"/>
+                <element label="Outgoing" value="2"/>
+            </choice>
+        </element>
+        <element label="Translated reference value" max_length="40" name="translated_reference_value" type="string"/>
+        <element choice="1" dependent="field" dependent_on_field="field" label="Source value" mandatory="true" max_length="40" name="translated_value" reference="sys_choice" reference_qual="javascript: new x_ixii2_ixconnect.ixcDataValidation().dataValidation(current.field.process, current.field.source_field)" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element choice="1" label="CDM Value" mandatory="true" max_length="40" name="value" reference="x_ixii2_ixconnect_cdm_values" reference_qual="javascript: new x_ixii2_ixconnect.ixcDataValidation().getCDMValues(current.field.cdm_field)" type="reference" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="field"/>
+        </index>
+        <index name="index2">
+            <element name="translated_value"/>
+        </index>
+        <index name="index3">
+            <element name="value"/>
+        </index>
+    </element>
+</database>

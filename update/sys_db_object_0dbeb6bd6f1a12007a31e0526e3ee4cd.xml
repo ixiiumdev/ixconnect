@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>api-server</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_ixii2_ixconnect_api_server</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">1ff43b51db2312000fc8f11fbf96197f</super_class>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-03-22 10:24:13</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>0dbeb6bd6f1a12007a31e0526e3ee4cd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>api-server</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_db_object_0dbeb6bd6f1a12007a31e0526e3ee4cd</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-04-15 09:02:04</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_ixii2_ixconnect.cdm_admin" name="x_ixii2_ixconnect.cdm_admin">a571be496f7746007a31e0526e3ee463</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+</record_update>

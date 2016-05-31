@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>true</disabled>
+        <field>queue</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-02-19 10:40:02</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>956fca6737a9520053924bf954990ebd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>queue</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_ui_policy_action_956fca6737a9520053924bf954990ebd</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-02-19 10:40:02</sys_updated_on>
+        <table>x_ixii2_ixconnect_ixqueue</table>
+        <ui_policy display_value="ixc-retryState">774e0a6737a9520053924bf954990e18</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

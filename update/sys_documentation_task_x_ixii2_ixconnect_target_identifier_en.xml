@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="x_ixii2_ixconnect_target_identifier" label="Target identifier" language="en" table="task">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_ixii2_ixconnect_target_identifier</element>
+            <help/>
+            <hint/>
+            <label>Target identifier</label>
+            <language>en</language>
+            <name>task</name>
+            <plural>Target identifiers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>manuel</sys_created_by>
+            <sys_created_on>2016-02-13 23:50:27</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>e4da4eb56f29d2407a31e0526e3ee470</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Target identifier</sys_name>
+            <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+            <sys_update_name>sys_documentation_task_x_ixii2_ixconnect_target_identifier_en</sys_update_name>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-02-14 09:35:13</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

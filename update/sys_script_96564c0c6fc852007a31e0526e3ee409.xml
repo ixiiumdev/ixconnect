@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ixii2_ixconnect_ixqueue</collection>
+        <condition/>
+        <description/>
+        <execute_function>true</execute_function>
+        <filter_condition table="x_ixii2_ixconnect_ixqueue">sourceLIKEInput^topic=Ticket^EQ<item endquery="false" field="source" goto="false" newquery="false" operator="LIKE" or="false" value="Input"/>
+            <item endquery="false" field="topic" goto="false" newquery="false" operator="=" or="false" value="Ticket"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>ixc-incomingTransaction</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[function onBefore(current, previous) {
+	var dbg = new x_ixii2_ixconnect.ixQDebug();
+	dbg.debug('BR-IncomingTransaction started for record: ' + current.sys_id);
+	
+	//invoke script includes for translate and queueconnect
+	var ixQ = new x_ixii2_ixconnect.ixQueueTranslate();
+	var ixC = new x_ixii2_ixconnect.ixQueueConnect();
+	var QID = current.sys_id;
+	var crInc;
+	var table = 'x_ixii2_ixconnect_tr';
+	
+	//parse the current payload from the queue and put it in the translate
+	var obj = global.JSON.parse(current.payload);
+	var retObj = ixQ.inputTranslate(obj, QID);
+	
+	//define if we need to create or update an incident
+	if(obj.Header.Action == 'Create'){
+		crInc = ixC.createIncidentFromQueue(obj, retObj);
+		
+		//retrieved information after creating Ticket
+		if(crInc != ''){
+			//set up responses for create action
+			ixC.createInternalResponse(table,'0',QID,null,null,crInc,obj.Header.IsSource);
+			
+			/*
+			Update response reference in case something went wrong during translation
+			Technically everything can be OK while there is still a mapping missing or translation error
+			during the error we create a response without reference (there is no reference during first translation)
+			*/
+		
+			ixC.updateResponseReference(QID, crInc);
+			
+			//create response for IXCore in the Queue
+			ixC.createResponse(obj,crInc);
+			
+			//update current queue record
+			current.incidentid.setDisplayValue(crInc);
+			current.processed = new GlideDateTime().getDisplayValue();
+			current.state = 'Processed';
+		}else{
+			dbg.debug('BR-IncomingTransaction - Something went wrong in ixC.createIncidentFromQueue');
+		}
+	}
+	
+	//doing an update action
+	if(obj.Header.Action == 'Update'){
+		crInc = ixC.updateIncidentFromQueue(obj, retObj);
+		
+		//retrieved information after updating Ticket
+		if(crInc != ''){			
+			//set up responses for update action
+			ixC.createInternalResponse(table,'0',QID,null,null,crInc,obj.Header.IsSource);
+			ixC.updateResponseReference(QID, crInc);
+			ixC.createResponse(obj,crInc);
+			
+			//update current queue record
+			current.incidentid.setDisplayValue(crInc);
+			current.processed = new GlideDateTime().getDisplayValue();
+			current.state = 'Processed';
+		}else{
+			dbg.debug('BR-IncomingTransaction - Something went wrong in ixC.updateIncidentFromQueue');
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2015-11-25 14:15:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>96564c0c6fc852007a31e0526e3ee409</sys_id>
+        <sys_mod_count>123</sys_mod_count>
+        <sys_name>ixc-incomingTransaction</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_script_96564c0c6fc852007a31e0526e3ee409</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-05-24 08:48:46</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=96564c0c6fc852007a31e0526e3ee409"/>
+</record_update>

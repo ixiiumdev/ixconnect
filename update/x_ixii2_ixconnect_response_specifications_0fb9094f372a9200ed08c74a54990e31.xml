@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_ixii2_ixconnect_response_specifications">
+    <x_ixii2_ixconnect_response_specifications action="INSERT_OR_UPDATE">
+        <actions>Check the 'To' fields</actions>
+        <code>103</code>
+        <error_description>'To' field invalid</error_description>
+        <sys_class_name>x_ixii2_ixconnect_response_specifications</sys_class_name>
+        <sys_created_by>ixcore.connector</sys_created_by>
+        <sys_created_on>2016-04-07 09:21:18</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>0fb9094f372a9200ed08c74a54990e31</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>'To' field invalid</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>x_ixii2_ixconnect_response_specifications_0fb9094f372a9200ed08c74a54990e31</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-04-07 09:25:25</sys_updated_on>
+    </x_ixii2_ixconnect_response_specifications>
+</record_update>

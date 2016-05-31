@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="state" label="State" language="en" table="x_ixii2_ixconnect_heartbeat">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <help/>
+            <hint/>
+            <label>State</label>
+            <language>en</language>
+            <name>x_ixii2_ixconnect_heartbeat</name>
+            <plural>States</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>manuel</sys_created_by>
+            <sys_created_on>2016-03-22 14:13:52</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>0d43b3b96f5a12007a31e0526e3ee49c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>State</sys_name>
+            <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+            <sys_update_name>sys_documentation_x_ixii2_ixconnect_heartbeat_state_en</sys_update_name>
+            <sys_updated_by>manuel</sys_updated_by>
+            <sys_updated_on>2016-03-22 14:13:52</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

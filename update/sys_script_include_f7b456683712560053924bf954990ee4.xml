@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_ixii2_ixconnect.ixcDataUtilsAjax</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>ixcDataUtilsAjax</name>
+        <script><![CDATA[var ixcDataUtilsAjax = Class.create();
+ixcDataUtilsAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	processFilter: function(){
+		
+		//var cdmID = this._getCDMProcess(this.getParameter('sysparm_process'));		
+		
+		var values = [];
+		var val = new GlideRecord('x_ixii2_ixconnect_cdm');
+		val.addQuery('cdm_process', this.getParameter('sysparm_process'));
+		val.query();
+		while(val.next()) {
+			values.push(val.sys_id.toString());
+		}
+		
+		// return values where process is same as specified process to limit choices
+		return values.join();
+	},
+	
+	type: 'ixcDataUtilsAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-03-18 10:09:44</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f7b456683712560053924bf954990ee4</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>ixcDataUtilsAjax</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_script_include_f7b456683712560053924bf954990ee4</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-05-20 14:32:45</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_ixii2_ixconnect_External - CDM Mapping.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<html>
+	<body>
+	
+		<iframe name="ifrmChild" id="ifrmChild" src="https://cdm.ixiium.com:5043" width="100%" height="100%" frameborder="0"/>
+		
+	</body>
+</html>
+</j:jelly>]]></html>
+        <name>External - CDM Mapping</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-02-17 17:47:26</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>ccfddd436fa516407a31e0526e3ee4a9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>External - CDM Mapping</sys_name>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_ui_page_ccfddd436fa516407a31e0526e3ee4a9</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-03-29 10:43:53</sys_updated_on>
+    </sys_ui_page>
+</record_update>

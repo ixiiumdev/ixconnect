@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>updateConnect</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition>current.x_ixii2_ixconnect_source_identifier != '' || current.x_ixii2_ixconnect_target_identifier != ''</condition>
+        <form_action>true</form_action>
+        <form_button>false</form_button>
+        <form_context_menu>true</form_context_menu>
+        <form_link>false</form_link>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <name>Save &amp; Connect</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[function updateConnect(current, previous) {
+	var externalAssign = current.x_ixii2_ixconnect_assign_external.changesTo(true);
+	var targetIns = current.x_ixii2_ixconnect_target_instance;
+	var refIns = current.x_ixii2_ixconnect_source_instance;
+	
+	if(!externalAssign && (targetIns != '' || refIns != '')){
+		var sid = current.sys_id;
+		var suo = current.sys_updated_on;
+		var nmb = current.number;
+		var srcNmb = current.x_ixii2_ixconnect_source_identifier;
+		var tgtNmb = current.x_ixii2_ixconnect_target_identifier;
+		var classname = current.getTableName();
+		
+		//invoking script includes
+		var ixQ = new x_ixii2_ixconnect.ixQueueConnect();
+		var ixQTr = new x_ixii2_ixconnect.ixQueueTranslate();
+		
+		//use script includes to generate ixcore queue ticket for update action
+		var ixQData = ixQTr.outputTranslate(current.sys_class_name,sid, current); //get translated data
+		var tgtIns = current.x_ixii2_ixconnect_target_instance.id; //get chosen instance id from incident ixconnect
+		var srcIns = current.x_ixii2_ixconnect_source_instance.id; //get previous instance id
+		var cid = getInstance(); //get current instance id
+		
+		/*
+		when reference number is empty, send the 'number' as parameter in the ixQ script include,
+		because when reference number is empty we know that this is the source instance.
+		
+		When reference number is not empty send the reference number as parameter as IncidentId
+		The script include will pass this number into the Header information for Ixcore to relate
+		to an existing record.
+ 		*/
+		
+		if(tgtNmb != '')
+			var ixQC = ixQ.updateInc(cid, tgtIns, suo, classname, 'Update', sid, ixQData, nmb, true, 'Ticket');
+		
+		else if(srcNmb != '')
+			var ixQCE = ixQ.updateInc(cid, srcIns, suo, classname, 'Update', sid, ixQData, srcNmb, false, 'Ticket');
+		
+	}
+}
+
+function getInstance(){
+	var gr = new GlideRecord('x_ixii2_ixconnect_instance');
+	gr.addQuery('current_instance', true);
+	gr.query();
+	if(gr.next())
+		return gr.id;
+}
+
+action.setRedirectURL(current);
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-04-15 09:46:20</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bb2c1ae937b2960053924bf954990ec5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Save &amp; Connect</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_ui_action_bb2c1ae937b2960053924bf954990ec5</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-04-15 09:48:41</sys_updated_on>
+        <table>task</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

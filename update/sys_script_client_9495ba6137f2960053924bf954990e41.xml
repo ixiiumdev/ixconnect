@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Give message to save the form before continue filling in.</description>
+        <field>cdm_process</field>
+        <global>true</global>
+        <messages/>
+        <name>ixc-hidePolicies</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	
+	var nT = g_form.getValue('no_translation');
+	var iR = g_form.getValue('is_reference');
+	var iL = g_form.getValue('is_list');
+	
+	if(g_form.isNewRecord()){
+		//set infomessage
+		g_form.addInfoMessage('Note: You have to save the form before you can complete all options in this form. After you mapped the fields please press the "save" button');
+		g_form.setSectionDisplay('Options', false);
+	}
+	if((nT || iR || iL) == true){
+		g_form.hideRelatedLists();
+	}
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>manuel</sys_created_by>
+        <sys_created_on>2016-04-15 11:39:05</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9495ba6137f2960053924bf954990e41</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>ixc-hidePolicies</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
+        <sys_update_name>sys_script_client_9495ba6137f2960053924bf954990e41</sys_update_name>
+        <sys_updated_by>manuel</sys_updated_by>
+        <sys_updated_on>2016-05-20 14:35:38</sys_updated_on>
+        <table>x_ixii2_ixconnect_cdm_fieldmapping</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
