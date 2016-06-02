@@ -4,7 +4,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="38743711db2312000fc8f11fbf96197e">529d33e96fb302007a31e0526e3ee41a</list_id>
+            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="283115320f23120049cac3ace1050e7e">529d33e96fb302007a31e0526e3ee41a</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -19,7 +19,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cdm_field</element>
-            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="38743711db2312000fc8f11fbf96197e">529d33e96fb302007a31e0526e3ee41a</list_id>
+            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="283115320f23120049cac3ace1050e7e">529d33e96fb302007a31e0526e3ee41a</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -34,7 +34,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>process</element>
-            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="38743711db2312000fc8f11fbf96197e">529d33e96fb302007a31e0526e3ee41a</list_id>
+            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="283115320f23120049cac3ace1050e7e">529d33e96fb302007a31e0526e3ee41a</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -49,7 +49,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>source_field</element>
-            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="38743711db2312000fc8f11fbf96197e">529d33e96fb302007a31e0526e3ee41a</list_id>
+            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="283115320f23120049cac3ace1050e7e">529d33e96fb302007a31e0526e3ee41a</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -64,7 +64,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>source_type</element>
-            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="38743711db2312000fc8f11fbf96197e">529d33e96fb302007a31e0526e3ee41a</list_id>
+            <list_id display_value="x_ixii2_ixconnect_cdm_fieldmapping" element="NULL" name="x_ixii2_ixconnect_cdm_fieldmapping" parent="NULL" relationship="NULL" sys_domain="global" view="283115320f23120049cac3ace1050e7e">529d33e96fb302007a31e0526e3ee41a</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
@@ -103,7 +103,7 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2015-11-18 13:43:33</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">38743711db2312000fc8f11fbf96197e</view>
+            <view display_value="Reference List" name="sys_ref_list">283115320f23120049cac3ace1050e7e</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>
