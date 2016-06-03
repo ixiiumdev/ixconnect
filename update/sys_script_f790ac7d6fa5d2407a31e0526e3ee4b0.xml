@@ -23,7 +23,7 @@
         <is_rest>false</is_rest>
         <message/>
         <name>ixc-incomingResponse</name>
-        <order>100</order>
+        <order>101</order>
         <priority>100</priority>
         <rest_method/>
         <rest_method_text/>
@@ -79,7 +79,7 @@
 	current.update();
 	
 	//create technical response ticket for OK message
-	si.createInternalResponse('x_ixii2_ixconnect_tr',rspCode,qid,null,null,getIncidentNumber(incid,obj.Header.IsSource),obj.Header.IsSource);
+	si.createInternalResponse('x_ixii2_ixconnect_tr',rspCode,qid,null,null,getIncidentNumber(incid),obj.Header.IsSource);
 }
 
 /*
@@ -116,13 +116,9 @@ function getIncident(number,src){
 		return gi.sys_id;
 }
 
-function getIncidentNumber(source_identifier, source){
+function getIncidentNumber(source_identifier){
 	var giN = new GlideRecord('task');
-	if(source){
 	giN.addQuery('x_ixii2_ixconnect_source_identifier', source_identifier);
-	}else{
-		giN.addQuery('number', source_identifier);
-	}
 	giN.query();
 	if(giN.next())
 		return giN.number;
@@ -134,7 +130,7 @@ function getIncidentNumber(source_identifier, source){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f790ac7d6fa5d2407a31e0526e3ee4b0</sys_id>
-        <sys_mod_count>76</sys_mod_count>
+        <sys_mod_count>77</sys_mod_count>
         <sys_name>ixc-incomingResponse</sys_name>
         <sys_overrides/>
         <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
@@ -143,7 +139,7 @@ function getIncidentNumber(source_identifier, source){
         <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
         <sys_update_name>sys_script_f790ac7d6fa5d2407a31e0526e3ee4b0</sys_update_name>
         <sys_updated_by>manuel</sys_updated_by>
-        <sys_updated_on>2016-05-23 13:39:06</sys_updated_on>
+        <sys_updated_on>2016-05-20 11:25:03</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

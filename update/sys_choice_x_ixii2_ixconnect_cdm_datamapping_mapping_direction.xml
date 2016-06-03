@@ -46,8 +46,8 @@
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2015-11-17 15:58:31</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>d455257a0fe3120049cac3ace1050ed1</sys_id>
-            <sys_mod_count>23</sys_mod_count>
+            <sys_id>371bef70db231200e00ebdd0cf96197c</sys_id>
+            <sys_mod_count>22</sys_mod_count>
             <sys_name>mapping_direction</sys_name>
             <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
             <sys_policy/>
@@ -55,7 +55,7 @@
             <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
             <sys_update_name>sys_choice_x_ixii2_ixconnect_cdm_datamapping_mapping_direction</sys_update_name>
             <sys_updated_by>manuel</sys_updated_by>
-            <sys_updated_on>2016-05-20 11:34:28</sys_updated_on>
+            <sys_updated_on>2016-05-20 11:33:45</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

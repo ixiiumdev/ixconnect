@@ -103,8 +103,8 @@
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2015-11-17 10:06:12</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>1c55257a0fe3120049cac3ace1050eee</sys_id>
-            <sys_mod_count>37</sys_mod_count>
+            <sys_id>402bef70db231200e00ebdd0cf961980</sys_id>
+            <sys_mod_count>36</sys_mod_count>
             <sys_name>state</sys_name>
             <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
             <sys_policy/>
@@ -112,7 +112,7 @@
             <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
             <sys_update_name>sys_choice_x_ixii2_ixconnect_ixqueue_state</sys_update_name>
             <sys_updated_by>manuel</sys_updated_by>
-            <sys_updated_on>2016-05-20 11:34:24</sys_updated_on>
+            <sys_updated_on>2016-05-20 11:33:40</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

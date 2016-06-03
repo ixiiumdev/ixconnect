@@ -226,12 +226,6 @@ ixQueueConnect.prototype = {
 		return rspID;
 	},
 	
-	/*
-	Author: Manuel Panman
-	Description: This function is used for all internal created responses like missing mapping
-	During the translation we don't have a ticket reference yet, we update the ticket reference after creating the ticket
-	*/
-	
 	updateResponseReference: function(qid, numb){
 		if(qid!=''){
 			var gr = new GlideRecord('x_ixii2_ixconnect_responses');
@@ -322,7 +316,7 @@ ixQueueConnect.prototype = {
         <sys_created_on>2015-11-16 20:54:13</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>d41c07016fb746007a31e0526e3ee43d</sys_id>
-        <sys_mod_count>176</sys_mod_count>
+        <sys_mod_count>175</sys_mod_count>
         <sys_name>ixQueueConnect</sys_name>
         <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
         <sys_policy>protected</sys_policy>
@@ -330,6 +324,6 @@ ixQueueConnect.prototype = {
         <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
         <sys_update_name>sys_script_include_d41c07016fb746007a31e0526e3ee43d</sys_update_name>
         <sys_updated_by>manuel</sys_updated_by>
-        <sys_updated_on>2016-05-24 08:44:52</sys_updated_on>
+        <sys_updated_on>2016-05-20 11:07:10</sys_updated_on>
     </sys_script_include>
 </record_update>

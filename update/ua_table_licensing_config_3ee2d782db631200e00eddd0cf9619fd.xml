@@ -7,18 +7,18 @@
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </owner_condition>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2016-05-26 09:45:40</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
-        <sys_id>8635617a0fe3120049cac3ace1050e56</sys_id>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2016-05-24 09:49:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3ee2d782db631200e00eddd0cf9619fd</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_ixii2_ixconnect_api_cdm_values</sys_name>
         <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
-        <sys_update_name>ua_table_licensing_config_8635617a0fe3120049cac3ace1050e56</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-05-26 09:45:40</sys_updated_on>
+        <sys_update_name>ua_table_licensing_config_3ee2d782db631200e00eddd0cf9619fd</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2016-05-24 09:49:30</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>

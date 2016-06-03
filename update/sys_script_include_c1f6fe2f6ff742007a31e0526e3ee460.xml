@@ -154,6 +154,7 @@ ixQueueTranslate.prototype = {
 			var found = false;
 			
 			while(dt.next()){
+				//gs.addInfoMessage()
 				//if the CDM field is in the object push the values as object to the array
 				if(data.Data[fm.cdm_field.getDisplayValue()] == dt.value.getDisplayValue()){
 					found = true;
@@ -173,7 +174,7 @@ ixQueueTranslate.prototype = {
 				var cdmField = fm.cdm_field.getDisplayValue();
 				var cdmData = data.Data[fm.cdm_field.getDisplayValue()];
 				
-				siRsp.createInternalResponse(tabel,'200',QID, cdmField, cdmData,null,null);
+				siRsp.createInternalResponse(tabel,'200',QID, cdmField, cdmData);
 			}
 		}
 		
@@ -241,7 +242,7 @@ ixQueueTranslate.prototype = {
         <sys_created_on>2015-11-24 13:43:03</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>c1f6fe2f6ff742007a31e0526e3ee460</sys_id>
-        <sys_mod_count>183</sys_mod_count>
+        <sys_mod_count>180</sys_mod_count>
         <sys_name>ixQueueTranslate</sys_name>
         <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
         <sys_policy>protected</sys_policy>
@@ -249,6 +250,6 @@ ixQueueTranslate.prototype = {
         <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
         <sys_update_name>sys_script_include_c1f6fe2f6ff742007a31e0526e3ee460</sys_update_name>
         <sys_updated_by>manuel</sys_updated_by>
-        <sys_updated_on>2016-05-24 08:38:03</sys_updated_on>
+        <sys_updated_on>2016-05-19 20:29:31</sys_updated_on>
     </sys_script_include>
 </record_update>

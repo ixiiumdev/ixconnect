@@ -17,7 +17,7 @@
         <number_ref display_value="CDMREQ">879a8fff6f4816007a31e0526e3ee4c3</number_ref>
         <provider_class/>
         <read_access>true</read_access>
-        <super_class display_value="Task" name="task">853259720f23120049cac3ace1050e82</super_class>
+        <super_class display_value="Task" name="task">23081163db031200e00ebdd0cf9619de</super_class>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2015-12-07 20:02:47</sys_created_on>

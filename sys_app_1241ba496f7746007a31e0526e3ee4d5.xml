@@ -3,7 +3,7 @@
     <sys_app action="INSERT_OR_UPDATE">
         <active>true</active>
         <enforce_license>log</enforce_license>
-        <js_level/>
+        <js_level>traditional</js_level>
         <licensable>true</licensable>
         <logo/>
         <menu display_value="IXConnect">b6613a496f7746007a31e0526e3ee44a</menu>

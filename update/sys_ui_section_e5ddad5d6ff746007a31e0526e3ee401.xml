@@ -206,7 +206,7 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>e5ddad5d6ff746007a31e0526e3ee401</sys_id>
-            <sys_mod_count>33</sys_mod_count>
+            <sys_mod_count>32</sys_mod_count>
             <sys_name>x_ixii2_ixconnect_ixqueue</sys_name>
             <sys_overrides/>
             <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
@@ -215,7 +215,7 @@
             <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
             <sys_update_name>sys_ui_section_e5ddad5d6ff746007a31e0526e3ee401</sys_update_name>
             <sys_updated_by>manuel</sys_updated_by>
-            <sys_updated_on>2016-05-20 14:36:50</sys_updated_on>
+            <sys_updated_on>2016-05-20 11:34:33</sys_updated_on>
             <sys_user/>
             <title>true</title>
             <view display_value="Default view" name="NULL">Default view</view>

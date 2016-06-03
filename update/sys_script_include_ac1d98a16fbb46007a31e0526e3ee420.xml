@@ -59,6 +59,7 @@ ixcDataValidation.prototype = {
 			var msg4 = ' data';
 			
 			current.setAbortAction(true);
+			gs.addErrorMessage(msg0 + msg1 + current.translated_value.getDisplayValue() + msg2 + msg3 + msg4);
 		}
 		
 	},
@@ -79,6 +80,7 @@ ixcDataValidation.prototype = {
 			
 			//abort action when field is already mapped
 			current.setAbortAction(true);
+			gs.addErrorMessage(msg0 + fieldMsg + msg1);
 		}
 	},
 	
@@ -150,6 +152,7 @@ ixcDataValidation.prototype = {
 		}
 		//passing all choices back to the sid parameter
 		while(ch.next()){
+			//gs.addInfoMessage('Choice found - ' + ch.label + ' in table - ' + ch.name);
 			sid += (',' + ch.sys_id);
 		}
 		
@@ -187,7 +190,7 @@ ixcDataValidation.prototype = {
         <sys_created_on>2015-11-17 21:40:05</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>ac1d98a16fbb46007a31e0526e3ee420</sys_id>
-        <sys_mod_count>152</sys_mod_count>
+        <sys_mod_count>151</sys_mod_count>
         <sys_name>ixcDataValidation</sys_name>
         <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
         <sys_policy>protected</sys_policy>
@@ -195,6 +198,6 @@ ixcDataValidation.prototype = {
         <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
         <sys_update_name>sys_script_include_ac1d98a16fbb46007a31e0526e3ee420</sys_update_name>
         <sys_updated_by>manuel</sys_updated_by>
-        <sys_updated_on>2016-05-20 14:33:17</sys_updated_on>
+        <sys_updated_on>2016-04-15 08:40:16</sys_updated_on>
     </sys_script_include>
 </record_update>

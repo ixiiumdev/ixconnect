@@ -21,6 +21,7 @@
 		g_form.addInfoMessage('Note: You have to save the form before you can complete all options in this form. After you mapped the fields please press the "save" button');
 		g_form.setSectionDisplay('Options', false);
 	}
+	g_form.addInfoMessage(nT + iR + iL);
 	if((nT || iR || iL) == true){
 		g_form.hideRelatedLists();
 	}
@@ -33,7 +34,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9495ba6137f2960053924bf954990e41</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>ixc-hidePolicies</sys_name>
         <sys_overrides/>
         <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
@@ -42,7 +43,7 @@
         <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
         <sys_update_name>sys_script_client_9495ba6137f2960053924bf954990e41</sys_update_name>
         <sys_updated_by>manuel</sys_updated_by>
-        <sys_updated_on>2016-05-20 14:35:38</sys_updated_on>
+        <sys_updated_on>2016-05-19 14:14:30</sys_updated_on>
         <table>x_ixii2_ixconnect_cdm_fieldmapping</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

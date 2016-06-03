@@ -18,15 +18,15 @@
         <chart_title_x_position>0</chart_title_x_position>
         <chart_title_y_position>0</chart_title_y_position>
         <chart_width/>
-        <color/>
-        <color_palette/>
+        <color display_value="Default Color">de699435d7033100b4964ebfae610331</color>
+        <color_palette display_value="Default UI14">aa558ab3d7732100fa6c0c12ce610377</color_palette>
         <colors/>
         <column>sys_class_name</column>
         <compute_percent>aggregate</compute_percent>
         <content/>
         <custom_chart_size>false</custom_chart_size>
         <custom_chart_title_position>false</custom_chart_title_position>
-        <decimal_precision/>
+        <decimal_precision>0</decimal_precision>
         <description/>
         <direction>minimize</direction>
         <display_grid>true</display_grid>
@@ -71,7 +71,7 @@
         <sc_stackby_item_id/>
         <sc_stackby_variable_id/>
         <score_color/>
-        <set_color/>
+        <set_color>chart_colors</set_color>
         <show_chart_border>false</show_chart_border>
         <show_chart_data_label>false</show_chart_data_label>
         <show_chart_title>report</show_chart_title>
@@ -86,17 +86,17 @@
         <sys_class_name>sys_report</sys_class_name>
         <sys_created_by>manuel</sys_created_by>
         <sys_created_on>2016-02-16 15:39:44</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>a14737626fa116407a31e0526e3ee445</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>IXCore total technical responses</sys_name>
         <sys_package display_value="IXConnect" source="x_ixii2_ixconnect">1241ba496f7746007a31e0526e3ee4d5</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="IXConnect">1241ba496f7746007a31e0526e3ee4d5</sys_scope>
         <sys_update_name>sys_report_a14737626fa116407a31e0526e3ee445</sys_update_name>
-        <sys_updated_by>manuel</sys_updated_by>
-        <sys_updated_on>2016-02-16 20:47:25</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2016-05-24 09:15:36</sys_updated_on>
         <table>x_ixii2_ixconnect_tr</table>
         <title>IXCore total technical responses</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
